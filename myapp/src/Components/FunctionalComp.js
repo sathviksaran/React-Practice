@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
-function FunctionalComp(){
-    return <p>This is a functional component</p>
+export default function FunctionalComp() {
+  return (
+    <div>
+        <p>This is a functional component</p>
+    </div>
+  )
 }
-
-export default FunctionalComp;
