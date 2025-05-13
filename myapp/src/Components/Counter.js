@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import UpdatedComp from './HigherOrder'
-export class Click extends Component {
+
+export class Counter extends Component {
 
     constructor(props) {
       super(props)
     
       this.state = {
-         count: 0
+          count: 0
       }
     }
 
-    ClickFn = () => {
+    HoverFn = () => {
         this.setState({count: this.state.count + 1});
     }
 
@@ -18,10 +19,10 @@ export class Click extends Component {
     const { count } = this.state;
     return (
       <div>
-        <button onClick={this.ClickFn}>{this.props.name} clicked me {count} times</button>
+        <button onMouseEnter={this.HoverFn}>{this.props.name} Hovered {count} times</button>
       </div>
     )
   }
 }
 
-export default UpdatedComp(Click)
+export default UpdatedComp(Counter)
